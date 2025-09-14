@@ -120,8 +120,5 @@ alias ls='ls --color=always'
 alias la='ls -lAh --color=always'
 alias upd='yay -Syu'
 
-#export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

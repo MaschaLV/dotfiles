@@ -4,7 +4,9 @@ Personal config files for various applications
 
 ## Contents
 
-- [Contents](#contents)  
+- [dotfiles](#dotfiles)
+  - [Contents](#contents)
+  - [Applications](#applications)
 
 ## Applications
 - alacritty

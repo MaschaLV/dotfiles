@@ -7,18 +7,44 @@ Personal config files for various applications
 - [dotfiles](#dotfiles)
   - [Contents](#contents)
   - [Applications](#applications)
-    - [One command install (arch)](#one-command-install-arch)
+    - [alacritty](#alacritty)
+    - [i3wm](#i3wm)
+    - [zsh](#zsh)
+      - [Install Oh-My-Zsh](#install-oh-my-zsh)
+      - [Install theme and addons](#install-theme-and-addons)
+      - [Copy and apply config files](#copy-and-apply-config-files)
 
 ## Applications
-- [alacritty](.config/alacritty/)
-- [i3wm](.config/i3/)
 
-### One command install (arch)
+The following applications are included in the config files.
 
-Required packages
+### alacritty
 
-    sudo pacman -S alacritty feh rofi ttf-hack
+Config found [here](.config/alacritty/alacritty.toml).
 
-Optional packages
+    sudo pacman -S alacritty
 
-    sudo pacman -S firefox discord telegram-desktop base-devel git htop tmux curl wget vlc thunar
+### i3wm
+
+Config found [here](.config/i3/config).
+
+     sudo pacman -S feh rofi
+
+### zsh 
+
+This setup includes the ["powerlevel10k" theme](.p10k.zsh), as well as the "zsh-autosuggestions" and "zsh-syntax-highlighting" addons.
+
+#### Install Oh-My-Zsh
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#### Install theme and addons
+
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+#### Copy and apply config files
+
+Copy .zshrc and .p10k.zsh into ~/  
+Apply the config
+
+    source ~/.zshrc

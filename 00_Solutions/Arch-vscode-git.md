@@ -63,7 +63,7 @@ Check that the socket is set:
 
 Add your key (KWallet will prompt):
 
-    ssh-add ~/.ssh/id_rsa
+    ssh-add ~/.ssh/id_ed25519
 
 List keys:
 
@@ -77,3 +77,8 @@ Open a new terminal in VS Code and run:
 
 You should see your key listed. Now Git push/pull will work without
 asking for the password.
+
+## Add startup entry (KWallet)
+Create a startup entry with the following command (on first login, KWallet will catch the ssh-add and use ssh-askpass to store the password, and load the key the following logins)
+
+    ssh-add ~/.ssh/id_ed25519

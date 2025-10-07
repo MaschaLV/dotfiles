@@ -44,7 +44,12 @@ This setup includes the ["powerlevel10k" theme](.p10k.zsh), as well as the "zsh-
 
 #### Copy and apply config files
 
-Copy .zshrc and .p10k.zsh into ~/  
-Apply the config
+Apply theme and plugin sections to .zshrc
 
-    source ~/.zshrc
+    ZSH_THEME="powerlevel10k/powerlevel10k"
+
+    plugins=(
+        git
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+    )
